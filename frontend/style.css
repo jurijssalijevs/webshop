@@ -91,16 +91,14 @@ header {
 }
 header a {
   color: #ffffff;
+  font-weight: bold;
   text-decoration: none;
-  padding-right: 1rem;
 }
 header a:hover {
   color: #f08040;
 }
 .brand a {
-  font-weight: bold;
   font-size: 3rem;
-  padding-left: 1rem;
 }
 footer {
   background-color: #203040;
@@ -204,7 +202,6 @@ footer {
   flex-wrap: wrap;
   align-items: flex-start;
 }
-
 .cart-list {
   flex: 3 1 60rem;
 }
@@ -218,7 +215,6 @@ footer {
   padding: 1rem;
   list-style-type: none;
 }
-
 .cart-list-container li {
   display: flex;
   justify-content: space-between;
@@ -296,23 +292,6 @@ footer {
   color: #f08000;
   border-top-color: #f08000;
 }
-/* Checkout */
-.checkout-steps {
-  display: flex;
-  justify-content: space-between;
-  width: 40rem;
-  margin: 1rem auto;
-}
-.checkout-steps > div {
-  border-top: 0.3rem #c0c0c0 solid;
-  color: #c0c0c0;
-  flex: 1 1;
-  padding-top: 1rem;
-}
-.checkout-steps > div.active {
-  color: #f08000;
-  border-top-color: #f08000;
-}
 /* Order */
 .order {
   display: flex;
@@ -341,7 +320,7 @@ footer {
 .order-info > div:first-child {
   margin-top: 0;
 }
-.order-info > div >div {
+.order-info > div > div {
   padding: 1rem;
 }
 .order-action {
@@ -364,4 +343,30 @@ footer {
   font-size: 2rem;
   font-weight: bold;
   color: #c04000;
+}
+/* Profile */
+.profile {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+}
+.profile-info {
+  flex: 1 1 20rem;
+}
+.profile-orders {
+  flex: 3 1 60rem;
+  margin-left: 1rem;
+}
+
+table {
+  width: 100%;
+}
+th {
+  text-align: left;
+}
+tbody > tr:nth-child(odd) {
+  background-color: #f0f0f0;
+}
+td {
+  padding: 0.5rem;
 }
