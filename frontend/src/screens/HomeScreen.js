@@ -1,7 +1,6 @@
 import axios from 'axios';
-import { getProducts } from '../api';
 import Rating from '../components/Rating';
-
+import { getProducts } from '../api';
 
 const HomeScreen = {
   render: async () => {

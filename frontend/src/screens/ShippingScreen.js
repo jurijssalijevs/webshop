@@ -46,6 +46,7 @@ const ShippingScreen = {
             <label for="country">Country</label>
             <input type="text" name="country" id="country" value="${country}" />
           </li>
+
           <li>
             <button type="submit" class="primary">Continue</button>
           </li>        

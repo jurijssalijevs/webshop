@@ -31,7 +31,7 @@ const ProductEditScreen = {
           document.location.hash = '/productlist';
         }
       });
-      document
+    document
       .getElementById('image-file')
       .addEventListener('change', async (e) => {
         const file = e.target.files[0];
@@ -111,6 +111,7 @@ const ProductEditScreen = {
           </ul>
         </form>
       </div>
+
     </div>
     `;
   },

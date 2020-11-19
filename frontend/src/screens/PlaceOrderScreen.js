@@ -1,13 +1,12 @@
 import {
-    getCartItems,
-    getShipping,
-    getPayment,
-    cleanCart,
-  } from '../localStorage';
-  import CheckoutSteps from '../components/CheckoutSteps';
-  import { showLoading, hideLoading, showMessage } from '../utils';
-  import { createOrder } from '../api';
-
+  getCartItems,
+  getShipping,
+  getPayment,
+  cleanCart,
+} from '../localStorage';
+import CheckoutSteps from '../components/CheckoutSteps';
+import { showLoading, hideLoading, showMessage } from '../utils';
+import { createOrder } from '../api';
 
 const convertCartToOrder = () => {
   const orderItems = getCartItems();
@@ -37,22 +36,22 @@ const convertCartToOrder = () => {
   };
 };
 const PlaceOrderScreen = {
-    after_render: async () => {
-        document
-          .getElementById('placeorder-button')
-          .addEventListener('click', async () => {
-            const order = convertCartToOrder();
-            showLoading();
-            const data = await createOrder(order);
-            hideLoading();
-            if (data.error) {
-              showMessage(data.error);
-            } else {
-              cleanCart();
-              document.location.hash = `/order/${data.order._id}`;
-            }
-          });
-      },
+  after_render: async () => {
+    document
+      .getElementById('placeorder-button')
+      .addEventListener('click', async () => {
+        const order = convertCartToOrder();
+        showLoading();
+        const data = await createOrder(order);
+        hideLoading();
+        if (data.error) {
+          showMessage(data.error);
+        } else {
+          cleanCart();
+          document.location.hash = `/order/${data.order._id}`;
+        }
+      });
+  },
   render: () => {
     const {
       orderItems,

@@ -1,12 +1,11 @@
 import express from 'express';
 import expressAsyncHandler from 'express-async-handler';
-import { isAdmin, isAuth } from '../utils';
+import { isAuth, isAdmin } from '../utils';
 import Order from '../models/orderModel';
 import User from '../models/userModel';
 import Product from '../models/productModel';
 
 const orderRouter = express.Router();
-
 orderRouter.get(
   '/summary',
   isAuth,
@@ -148,4 +147,5 @@ orderRouter.put(
     }
   })
 );
+
 export default orderRouter;

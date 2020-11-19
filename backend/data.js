@@ -5,7 +5,7 @@ export default {
       name: 'Hiskywin Full Zip Running Shirts Thermal Workout',
       category: 'Shirts',
       image: '/images/product-1.jpg',
-      price: 1,
+      price: 59,
       brand: 'Hiskywin',
       rating: 4.5,
       numReviews: 10,
@@ -20,7 +20,6 @@ export default {
       brand: 'Nike',
       rating: 5,
       numReviews: 51,
-      countInStock: 6,
     },
     {
       _id: '3',
@@ -31,7 +30,6 @@ export default {
       brand: 'Adidas',
       rating: 4,
       numReviews: 45,
-      countInStock: 6,
     },
     {
       _id: '4',
